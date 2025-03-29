@@ -1,11 +1,54 @@
+var bg;
+var title = "a much longer title for test purposes"
+var storyCounter = 0;
+var sword
+
 function setup() {
-    var canvas = createCanvas(800, 800);
-    canvas.parent("p5container");
+  createCanvas(windowWidth, windowHeight);
+  bg = loadImage('paperTexture.jpg');
+  sword = loadImage('sword.png');
+  storytext = loadStrings('storyoptions.txt');
+  titletext = loadStrings('Titles.txt');
+  choicestext = loadStrings('multiplechoices.txt');
 }
 
 function draw() {
-    background(220);
+  background(bg);
+  
+  let title = titletext[storyCounter]
+  let phrase = storytext[storyCounter]
+  let choice1 = choicestext[storyCounter];
+  let choice2 = choicestext[(storyCounter)+1];
+  //works same as instagram stories where you go to different slides and choose your own adventure books
+  
+  textFont('Algerian');
+  textSize(30)
+  textAlign(CENTER)
+  text(title, windowWidth/2, 50)
+  
+  textSize(20)
+  textFont('Arial');
+  text(phrase, windowWidth/2, 200)
+  
+  if (storyCounter == 0){
+    text(choice1,windowWidth/4,400);
+    text(choice2,(windowWidth/4)+(windowWidth/2),400);
+    
+    image(sword,(windowWidth/2)-190,250,350,350)
+  }
+  
+}
 
-    fill(255, 255, 255);
-    ellipse(400, 400, 200);
+function touchEnded(){
+  if (storyCounter == 0){
+    if (mouseX < windowWidth/2){
+      storyCounter += 1;
+    }
+    if (mouseX > windowWidth/2){
+      storyCounter += 2;
+    }
+  }
+  else{
+    storyCounter = 0;
+  }
 }
