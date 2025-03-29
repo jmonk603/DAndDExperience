@@ -5,11 +5,11 @@ var sword
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  bg = loadImage('js/paperTexture.jpg');
-  sword = loadImage('js/sword.png');
-  storytext = loadStrings('js/storyoptions.txt');
-  titletext = loadStrings('js/Titles.txt');
-  choicestext = loadStrings('js/multiplechoices.txt');
+  bg = loadImage('DAndDExperience/js/paperTexture.jpg');
+  sword = loadImage('DAndDExperience/js/sword.png');
+  storytext = loadStrings('DAndDExperience/js/storyoptions.txt');
+  titletext = loadStrings('DAndDExperience/js/Titles.txt');
+  choicestext = loadStrings('DAndDExperience/js/multiplechoices.txt');
 }
 
 function draw() {
