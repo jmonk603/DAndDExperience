@@ -1,2 +1,3 @@
-accept quest
-dont accept quest
+blank
+accept the quest
+don't accept the quest
