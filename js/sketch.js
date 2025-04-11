@@ -36,7 +36,6 @@ function draw() {
     
     image(sword,(windowWidth/2)-190,250,350,350)
   }
-  
 }
 
 function touchEnded(){
