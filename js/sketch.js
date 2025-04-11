@@ -5,11 +5,11 @@ var sword
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  bg = loadImage('js/paperTexture.jpg');
-  sword = loadImage('js/sword.png');
-  storytext = loadStrings('js/storyoptions.txt');
-  titletext = loadStrings('js/Titles.txt');
-  choicestext = loadStrings('js/multiplechoices.txt');
+  bg = loadImage('paperTexture.jpg');
+  sword = loadImage('sword.png');
+  storytext = loadStrings('storyoptions.txt');
+  titletext = loadStrings('Titles.txt');
+  choicestext = loadStrings('multiplechoices.txt');
 }
 
 function draw() {
@@ -30,7 +30,7 @@ function draw() {
   textFont('Arial');
   text(phrase, windowWidth/2, 200)
   
-  if (storyCounter == 0){
+  if (storyCounter == 1){
     text(choice1,windowWidth/4,400);
     text(choice2,(windowWidth/4)+(windowWidth/2),400);
     
@@ -40,15 +40,26 @@ function draw() {
 }
 
 function touchEnded(){
-  if (storyCounter == 0){
+  if (storyCounter == 1){
     if (mouseX < windowWidth/2){
       storyCounter += 1;
     }
     if (mouseX > windowWidth/2){
-      storyCounter += 2;
+      storyCounter += 3;
     }
   }
   else{
-    storyCounter = 0;
+    storyCounter += 1;
   }
+  if (storyCounter == 5){
+    openLink();
+  }
+  if (storyCounter == 3){
+    openLink();
+  }
+  console.log(storyCounter)
+}
+
+function openLink(){
+  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 }
