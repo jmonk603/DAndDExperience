@@ -67,7 +67,7 @@ function touchEnded(){
 
 function openLink(){
   if (storyCounter == 3){
-    window.location.href = ('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    window.location.href = ('https://jmonk603.github.io/DAndDExperienceP2/');
   }
   else if (storyCounter == 5){
     window.location.href = ('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
