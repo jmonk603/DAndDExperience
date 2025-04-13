@@ -5,11 +5,11 @@ var sword
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  bg = loadImage('js/paperTexture.jpg');
-  sword = loadImage('js/sword.png');
-  storytext = loadStrings('js/storyoptions.txt');
-  titletext = loadStrings('js/Titles.txt');
-  choicestext = loadStrings('js/multiplechoices.txt');
+  bg = loadImage('paperTexture.jpg');
+  sword = loadImage('sword.png');
+  storytext = loadStrings('storyoptions.txt');
+  titletext = loadStrings('Titles.txt');
+  choicestext = loadStrings('multiplechoices.txt');
 }
 
 function draw() {
@@ -19,6 +19,11 @@ function draw() {
   let phrase = storytext[storyCounter]
   let choice1 = choicestext[storyCounter];
   let choice2 = choicestext[(storyCounter)+1];
+  
+  let phrases = split(phrase, "...")
+  if (phrases[1] == " "){
+    phrases[1] = " ";
+  }
   //works same as instagram stories where you go to different slides and choose your own adventure books
   
   textFont('Algerian');
@@ -28,7 +33,7 @@ function draw() {
   
   textSize(20)
   textFont('Arial');
-  text(phrase, windowWidth/2, 200)
+  text((phrases[0]+'\n'+phrases[1]), windowWidth/2, 180)
   
   if (storyCounter == 1){
     text(choice1,windowWidth/4,400);
@@ -36,6 +41,7 @@ function draw() {
     
     image(sword,(windowWidth/2)-190,250,350,350)
   }
+  
 }
 
 function touchEnded(){
@@ -60,5 +66,10 @@ function touchEnded(){
 }
 
 function openLink(){
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+  if (storyCounter == 3){
+    window.location.href = ('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+  }
+  else if (storyCounter == 5){
+    window.location.href = ('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+  }
 }
