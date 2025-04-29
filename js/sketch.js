@@ -67,11 +67,11 @@ function touchEnded(){
 
 function openLink(){
   if (storyCounter == 3){
-    window.location.href = ('https://jmonk603.github.io/DAndDExperienceP2/');
     window.open("https://jmonk603.github.io/DAndDARAcceptQuest/");
+    window.location.href = ('https://jmonk603.github.io/DAndDExperienceP2/');
   }
   else if (storyCounter == 5){
-    window.location.href = ('https://jmonk603.github.io/DAndDExperience/');
     window.open("https://jmonk603.github.io/DAndDARDenyQuest/");
+    window.location.href = ('https://jmonk603.github.io/DAndDExperience/');
   }
 }
