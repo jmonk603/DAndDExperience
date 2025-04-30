@@ -2,6 +2,8 @@ var bg;
 var title = "a much longer title for test purposes"
 var storyCounter = 0;
 var sword
+var cor1
+var cor2
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
