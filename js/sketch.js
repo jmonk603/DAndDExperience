@@ -18,6 +18,8 @@ function setup() {
 
 function draw() {
   background(bg);
+  image(cor1,-3,250,250,350)
+  image(cor2,windowWidth-240,-15,250,350)
   
   let title = titletext[storyCounter]
   let phrase = storytext[storyCounter]
