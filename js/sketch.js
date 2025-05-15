@@ -94,7 +94,6 @@ function openLink(){
     window.location.href = ('https://jmonk603.github.io/DAndDExperienceP2/');
   }
   else if (storyCounter == 5){
-    window.open("https://jmonk603.github.io/DandDARDenyQuest/");
-    window.location.href = ('https://jmonk603.github.io/DAndDExperienceIntro/');
+    window.location.href = ('https://jmonk603.github.io/DandDARDenyQuest/');
   }
 }
